@@ -1,0 +1,8 @@
+.scrollShow {
+    opacity: 0;
+    transition: 0.2s ease all;
+}
+
+.scrollShow.show {
+    opacity: 1;
+}
