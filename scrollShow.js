@@ -38,6 +38,7 @@ let scrollShow = {
         for (let i = 0; i < this.items.length; i++) {
             this.items[i] = this.updateRect(this.items[i])
         }
+        this.onScroll()
     },
     
     onScroll: function() {
