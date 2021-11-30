@@ -3,6 +3,8 @@ ScrollShow is a JavaScript library to make DOM elements "scroll to show".
 
 For example, if we want DOM elements to stay hidden initially and only becomes visible when user scrolls them into viewport.
 
+[Demo](https://francochan.co/scrollShow/)
+
 # Installation
 
 Download `scrollShow.js`, and link it into the `HTML` file
@@ -12,7 +14,7 @@ Download `scrollShow.js`, and link it into the `HTML` file
 
 # Usage
 
-## Step 1: CSS
+### Step 1: CSS
 Add a CSS rule for `.scrollShow` so that those elements are initially **hidden**.
 
 Add a CSS rule for `.scrollShow.show` so that those elements can be **visible** later. 
@@ -27,7 +29,7 @@ Add a CSS rule for `.scrollShow.show` so that those elements can be **visible** 
 }
 ```
 
-## Step 2: HTML
+### Step 2: HTML
 For DOM elements that you want to "scroll to show", add a `scrollShow` class to them
 ``` HTML
 <div class="[some class...] scrollShow">
@@ -35,18 +37,18 @@ For DOM elements that you want to "scroll to show", add a `scrollShow` class to 
 </div>
 ```
 
-## Step 3: JavaScript
+### Step 3: JavaScript
 After the closing `body` tag, add the JavaScript
 ``` JavaScript
 scrollShow.addItems()
 ```
 so that all those DOM elements with the `scrollShow` class are tracked.
 
-## Step 4: And that's it
+### Step 4: And that's it
 Now, whenever a tracked element gets scrolled "into view", the element will have the `show` class automatically added to it, which makes the element visible.
 
 # Advanced
-## HTML
+### HTML
 There are more `data-` options that you can specify in an element for more fine tuned `scrollShow` behaviour
 ``` HTML
 <div class="scrollShow" 
