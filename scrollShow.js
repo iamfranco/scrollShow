@@ -1,15 +1,18 @@
 let scrollShow = {
     items: [], // arary of objects containing DOM element and parameters for scrollShow
     delay: 0.05, // time delay (seconds) on simutaneously showing elements
-    
+    default_element_percent: 100, 
+    default_viewport_percent: 0,
+    hide_on_scroll_back: false,
+
     // populate this.items to keep track of scrollShow elements
     addItems: function(classname="scrollShow") {
         let elements = document.getElementsByClassName(classname)
         for (let i = 0; i < elements.length; i++) {
             const el = elements[i]
             const showClass = el.getAttribute('data-scroll-show-class') || 'show'
-            const elPercent = parseInt(el.getAttribute('data-scroll-show-element-percent') || '100')
-            const vpPercent = parseInt(el.getAttribute('data-scroll-show-viewport-percent') || '0')
+            const elPercent = parseInt(el.getAttribute('data-scroll-show-element-percent')) || this.default_element_percent
+            const vpPercent = parseInt(el.getAttribute('data-scroll-show-viewport-percent')) || this.default_viewport_percent
             let item = {
                 element: el,
                 showClass: showClass,
@@ -58,7 +61,7 @@ let scrollShow = {
                 el.style.transitionDelay = `${this.delay*count}s`
                 count++
                 el.classList.add(showClass)
-            } else if (!isAfterY[i] && alreadyShown[i]) {
+            } else if (this.hide_on_scroll_back && !isAfterY[i] && alreadyShown[i]) {
                 el.classList.remove(showClass)
             }
         }

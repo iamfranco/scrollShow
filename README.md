@@ -7,9 +7,9 @@ For example, if we want DOM elements to stay hidden initially and only becomes v
 
 # Installation
 
-Download `scrollShow.js`, and link it into the `HTML` file
+Add the following script into the `HTML` file
 ``` HTML
-<script src="scrollShow.js"></script>
+<script src="https://ghcdn.rawgit.org/iamfranco/scrollShow/master/scrollShow.js"></script>
 ```
 
 # Usage
@@ -63,3 +63,17 @@ There are more `data-` options that you can specify in an element for more fine 
 2. `data-scroll-show-element-percent` is how much an element (measuring from the top, in percentage of height) should be visible, in order for it to be considered "in view". <br> By default, that's `100`%, i.e. right at the bottom of the element.
 
 3. `data-scroll-show-viewport-percent` is where the "in view threshold" is located at within the viewport (measuring from the bottom, in percentage of height). <br> By default, that's `0`%, i.e. right at the bottom of the viewport.
+
+### JavaScript
+There are some properties within the `scrollShow` object that controls how `scrollShow` behaves
+
+``` JavaScript
+scrollShow.delay =  0.05 // time delay (seconds)
+scrollShow.default_element_percent = 100 // percent of element height
+scrollShow.default_viewport_percent = 0 // percent of viewport height
+scrollShow.hide_on_scroll_back = false // hide elements when we scroll back?
+```
+1. `.delay` is the time (in seconds) it takes between consecutive elements become visible, so that they can appear "sequentially" as opposite to "suddenly all appearing at the same time".
+2. `.default_element_percent` is the default value for the `data-scroll-show-element-percent` attribute.
+3. `.default_viewport_percent` is the default value for the `data-scroll-show-viewport-percent` attribute.
+4. `.hide_on_scroll_back` is boolean for if we want elements to hide when we scroll back up.
