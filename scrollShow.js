@@ -11,8 +11,8 @@ let scrollShow = {
         for (let i = 0; i < elements.length; i++) {
             const el = elements[i]
             const showClass = el.getAttribute('data-scroll-show-class') || 'show'
-            const elPercent = parseInt(el.getAttribute('data-scroll-show-element-percent')) || this.default_element_percent
-            const vpPercent = parseInt(el.getAttribute('data-scroll-show-viewport-percent')) || this.default_viewport_percent
+            let elPercent = parseInt(el.getAttribute('data-scroll-show-element-percent') || this.default_element_percent)
+            let vpPercent = parseInt(el.getAttribute('data-scroll-show-viewport-percent') || this.default_viewport_percent)
             let item = {
                 element: el,
                 showClass: showClass,
