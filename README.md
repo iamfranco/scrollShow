@@ -9,7 +9,7 @@ For example, if we want DOM elements to stay hidden initially and only becomes v
 
 Add the following script into the `HTML` file
 ``` HTML
-<script src="https://cdn.jsdelivr.net/gh/iamfranco/scrollShow@master/scrollShow.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/iamfranco/scrollShow@v1.0.0/scrollShow.js"></script>
 ```
 
 # Usage
