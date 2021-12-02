@@ -1,9 +1,9 @@
 let scrollShow = {
     items: [], // arary of objects containing DOM element and parameters for scrollShow
     delay: 0.05, // time delay (seconds) on simutaneously showing elements
-    default_element_percent: 100, 
-    default_viewport_percent: 0,
-    hide_on_scroll_back: false,
+    default_element_percent: 100, // default percentage of element in viewport to be "in view"
+    default_viewport_percent: 0, // default percentage of viewport to be used for "in view checking"
+    hide_on_scroll_back: false, // hide if scrolling back up
 
     // populate this.items to keep track of scrollShow elements
     addItems: function(classname="scrollShow") {
